@@ -4,9 +4,9 @@ using System.Text;
 
 namespace GameCharacters.Data
 {
-    public abstract class BaseCharacter // abstract - nozime ka obligati jamantojas!!! pa taisno nevar uztaisiit
+    public abstract class BaseCharacter // abstract - nozīmē ka obligati jamantojas!!! pa taisno nevar uztaisiit
     {
-        public virtual int Step => 1;//liekam uz virtaul un tikai par 1 lai palielinaaas//abstracta īpašība janorāda cik būs vētība OBLIGĀTI
+        public virtual int Step => 1;//liekam uz virtuālo un tikai par 1 lai palielinaaas//abstracta īpašība janorāda cik būs vētība OBLIGĀTI
         public virtual int Stamina { get; set; }
         public int PostionX { get; protected  set; }
         public int PostionY { get; protected set; }
@@ -28,7 +28,7 @@ namespace GameCharacters.Data
                     PostionX += Step;
                     break;
                 default:
-                    throw new ArgumentOutOfRangeException(nameof(direction),direction,"Not allowed movement");
+                    throw new ArgumentOutOfRangeException(nameof(direction),direction,"Not allowed movement"); 
             }
 
 
